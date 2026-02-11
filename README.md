@@ -1,1 +1,1 @@
-# sparta
+# SSAFY SPARTA
