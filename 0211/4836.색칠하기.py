@@ -25,3 +25,5 @@ T = int(input())  # 테스트 케이스 수
 for t in range(1, T + 1):
     result = solve()
     print(f"#{t} {result}")
+
+#잘 모르겠어서 AI에게 도움 받앗읍니다
