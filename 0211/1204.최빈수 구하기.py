@@ -1,49 +1,30 @@
-def infix_to_postfix(expression):
-    precedence = {'+': 1, '*': 2}
-    stack = []
-    result = []
-    
-    for char in expression:
-        if char.isdigit():  # 숫자는 결과에 바로 추가
-            result.append(char)
-        else:  # 연산자는 스택에서 처리
-            while stack and stack[-1] != '(' and precedence[stack[-1]] >= precedence[char]:
-                result.append(stack.pop())
-            stack.append(char)
-    
-    while stack:
-        result.append(stack.pop())  # 스택에 남아있는 연산자들 처리
-    
-    return ''.join(result)
+T=int(input())
 
+for tc in range(1, T+1):
+    N=int(input())
+    scores=list(map(int, input().split()))
 
-def evaluate_postfix(postfix):
-    stack = []
-    
-    for char in postfix:
-        if char.isdigit():
-            stack.append(int(char))
+    score_dict={}
+
+    for i in scores:
+        if i in score_dict:
+                score_dict[i] +=1
         else:
-            b = stack.pop()
-            a = stack.pop()
-            if char == '+':
-                stack.append(a + b)
-            elif char == '*':
-                stack.append(a * b)
-    
-    return stack[0]  # 최종 결과
+                score_dict[i] = 1
 
+    max_fq=score_dict[0]
+    
+    answer=0 # 밸류가 가장 큰 값의 키를 입력할 변수
+   
+    for j in score_dict: #최빈값(딕셔너리 안에서 밸류가 가장 큰 키)
+            if score_dict[j] > max_fq: 
+                max_fq = score_dict[j]
+                answer=j
+            
+            elif score_dict[j] == max_fq: #빈도수가 같은게 있을 때
+                if j > answer: #최빈값의 키보다 j의 수가 더 크면
+                    answer =j #최빈값에 j 할당
 
-# 입력 처리
-T = 10  # 10개의 테스트 케이스
-for _ in range(T):
-    length = int(input())  # 길이 (사용하지 않음)
-    expression = input().strip()
-    
-    # 1. 중위 표기식 -> 후위 표기식 변환
-    postfix_expression = infix_to_postfix(expression)
-    
-    # 2. 후위 표기식 계산
-    result = evaluate_postfix(postfix_expression)
-    
-    print(result)
+    print(f'#{tc} {answer}')
+        
+        #score_dict 에서 밸류값이 가장 큰 키 부터 내림차순으로 프린트 
