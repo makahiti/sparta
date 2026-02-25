@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+
+      width: 500px;
+      height: 300px;
+      background-color: bisque;
+      border: 1px solid black;
+
+    }
+
+    .item1 {
+      width: 100px;
+      background-color: forestgreen;
+      border: 1px solid black;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .column-reverse{
+      flex-direction: column-reverse;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>flex-direction</h1>
+  <hr>
+  <h2>row(기본값)</h2>
+  <div class="box">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+  </div>
+  <h2>row-reverse</h2>
+  <div class="box row-reverse">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+  </div>
+  <h2>column</h2>
+  <div class="box column">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+  </div>
+  <h2>column-reverse</h2>
+  <div class="box column-reverse">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+  </div>
+</body>
+
+</html>

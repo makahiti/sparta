@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+      flex-wrap: wrap;
+
+      width: 500px;
+      height: 600px;
+      background-color: bisque;
+      border: 1px solid black;
+
+    }
+
+    .item1 {
+      width: 100px;
+      background-color: forestgreen;
+      border: 1px solid black;
+      margin: 10px;
+      text-align: center;
+
+      font-size: 5rem;
+    }
+
+    .flex-start {
+      align-items: flex-start;
+    }
+
+    .flex-end {
+      align-items: flex-end;
+    }
+
+    .center {
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>align-items</h1>
+  <hr>
+  <h2>stretch(기본값)</h2>
+  <div class="box">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>flex-start</h2>
+  <div class="box flex-start">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>flex-end</h2>
+  <div class="box flex-end">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>center</h2>
+  <div class="box center">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+</body>
+
+</html>

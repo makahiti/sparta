@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      display: flex;
+      /* 여러줄 일때 동작 */
+      flex-wrap: wrap;
+
+      width: 500px;
+      height: 400px;
+      background-color: bisque;
+      border: 1px solid black;
+
+    }
+
+    .item1 {
+      width: 200px;
+      height: 50px;
+      background-color: forestgreen;
+      border: 1px solid black;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .flex-end {
+      align-content: flex-end;
+    }
+
+    .center {
+      align-content: center;
+    }
+
+    .space-between {
+      align-content: space-between;
+    }
+
+    .space-around {
+      align-content: space-around;
+    }
+
+    .space-evenly {
+      align-content: space-evenly;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>align-content</h1>
+  <hr>
+  <h2>flex-start(기본값)</h2>
+  <div class="box">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>flex-end</h2>
+  <div class="box flex-end">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>center</h2>
+  <div class="box center">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>space-between</h2>
+  <div class="box space-between">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>space-around</h2>
+  <div class="box space-around">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+  <h2>space-evnely</h2>
+  <div class="box space-evenly">
+    <div class="item1">1</div>
+    <div class="item1">2</div>
+    <div class="item1">3</div>
+    <div class="item1">4</div>
+    <div class="item1">5</div>
+  </div>
+</body>
+
+</html>
