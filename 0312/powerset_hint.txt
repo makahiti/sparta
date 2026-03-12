@@ -1,0 +1,16 @@
+1.전체 부분집합을 구한다
+-파라미터
+    1.cnt (10이 되면 종료)
+    2.현재 부분집합의 합(total)
+    3.현재 부분집합(subset)
+
+   recur(nt,total,subset):
+    가지치기
+    합이 10이라면 -> 출력
+    이미 합이 10이 넘은 경우 -> 가지치기
+
+    #포함 하는 경우
+    recur(cnt+1,total+현재값,subset+[현재값])
+
+    #포함 안하는 경우
+    recur(cnt+1, total,subset)
