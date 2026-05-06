@@ -34,4 +34,4 @@ def bfs ():
         for nv in adj_lst[v]:
             if not visited[nv]:
                 visited[nv] = visited[v] + 1
-                q.append(nv)
+                q.append(nv) 
